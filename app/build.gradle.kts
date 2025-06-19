@@ -41,6 +41,7 @@ android {
     }
     buildFeatures {
         compose = true
+        viewBinding = true
     }
 }
 
@@ -50,6 +51,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.constraintlayout)
     //compose
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
@@ -70,10 +73,9 @@ dependencies {
     //paging
     implementation(libs.paging.compose)
     implementation(libs.paging.runtime)
-
+    //hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
-
     //test
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
