@@ -1,5 +1,6 @@
-package com.xbsaykat.klistify.di
+package com.xbsaykat.klistify.base.di
 
+import BASE_URL
 import android.content.Context
 import android.util.Log
 import com.xbsaykat.klistify.BuildConfig
@@ -25,7 +26,15 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object AppModule {
+object NetworkModule {
+    @Singleton
+    @Provides
+    fun providesApiClient(builder: Retrofit.Builder): Retrofit {
+        return builder
+            .baseUrl(BASE_URL)
+            .build()
+    }
+
     @Singleton
     @Provides
     fun providesRetrofitBuilder(client: OkHttpClient): Retrofit.Builder {

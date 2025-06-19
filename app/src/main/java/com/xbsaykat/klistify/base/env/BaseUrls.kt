@@ -1,5 +1,5 @@
 import com.xbsaykat.klistify.BuildConfig
-import com.xbsaykat.klistify.utils.Types.BuildType
+import com.xbsaykat.klistify.base.utils.Types.BuildType
 
 private val currentEnv = if (BuildConfig.DEBUG) BuildType.STAGE
 else BuildType.PRODUCTION

@@ -1,4 +1,4 @@
-package com.xbsaykat.klistify.presentation.ui.theme
+package com.xbsaykat.klistify.base.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

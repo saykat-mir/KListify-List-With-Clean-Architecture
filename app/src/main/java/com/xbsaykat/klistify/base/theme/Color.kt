@@ -1,4 +1,4 @@
-package com.xbsaykat.klistify.presentation.ui.theme
+package com.xbsaykat.klistify.base.theme
 
 import androidx.compose.ui.graphics.Color
 

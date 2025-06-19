@@ -1,4 +1,4 @@
-package com.xbsaykat.klistify.utils
+package com.xbsaykat.klistify.base.utils
 
 object Types {
     enum class BuildType {
