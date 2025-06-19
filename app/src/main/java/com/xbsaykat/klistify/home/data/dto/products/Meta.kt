@@ -1,4 +1,4 @@
-package com.xbsaykat.klistify.home.data.model
+package com.xbsaykat.klistify.home.data.dto.products
 
 data class Meta(
     val barcode: String,
