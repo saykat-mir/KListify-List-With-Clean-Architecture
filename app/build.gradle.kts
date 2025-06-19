@@ -6,8 +6,9 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.hilt.plugin)
-
 }
+
+apply(from = "environment.gradle")
 
 android {
     namespace = "com.xbsaykat.klistify"

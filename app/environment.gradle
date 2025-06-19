@@ -1,0 +1,7 @@
+android {
+    defaultConfig {
+        buildConfigField ("String", "baseurl", PROD_BASE_URL)
+        buildConfigField ("String", "stage_baseurl", STAGE_BASE_URL)
+        buildConfigField ("String", "dev_baseurl", DEV_BASE_URL)
+    }
+}
