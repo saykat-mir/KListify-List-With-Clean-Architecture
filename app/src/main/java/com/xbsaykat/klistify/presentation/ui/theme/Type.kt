@@ -1,4 +1,4 @@
-package com.xbsaykat.klistify.ui.theme
+package com.xbsaykat.klistify.presentation.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
