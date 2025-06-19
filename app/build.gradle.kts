@@ -1,12 +1,17 @@
+import org.gradle.kotlin.dsl.implementation
+
 plugins {
     alias(libs.plugins.android.application)
+    id("org.jetbrains.kotlin.kapt")
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.hilt.plugin)
+
 }
 
 android {
     namespace = "com.xbsaykat.klistify"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.xbsaykat.klistify"
@@ -40,15 +45,36 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    //compose
+    implementation(libs.androidx.activity.compose)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.navigation.compose)
+    //lifecycle + viewmodel
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.lifecycle.viewmodel.compose)
+    //retrofit + OkHttp
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.interceptor)
+    // Kotlin Coroutines
+    implementation(libs.coroutines.core)
+    implementation(libs.coroutines.android)
+    //coil
+    implementation(libs.coil)
+    //paging
+    implementation(libs.paging.compose)
+    implementation(libs.paging.runtime)
+
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+
+    //test
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
