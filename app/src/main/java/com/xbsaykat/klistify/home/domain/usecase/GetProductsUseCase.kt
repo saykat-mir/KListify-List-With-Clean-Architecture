@@ -1,5 +1,6 @@
 package com.xbsaykat.klistify.home.domain.usecase
 
+import android.util.Log
 import com.xbsaykat.klistify.base.utils.ErrorHandler
 import com.xbsaykat.klistify.base.utils.ResponseHandler
 import com.xbsaykat.klistify.home.domain.repository.HomeRepo
